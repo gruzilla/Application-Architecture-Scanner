@@ -29,10 +29,10 @@ USB stick, place the application in a writable folder.
 
 | File | Responsibility |
 |---|---|
-| `Core — scanning and export/Sources/Core/ScannerSettings.swift` | Applications folder and default IT administrator email |
-| `Core — scanning and export/Sources/Core/ApplicationScanner.swift` | App enumeration and local metadata extraction |
-| `Core — scanning and export/Sources/Core/MachOInspector.swift` | Executable architecture detection |
-| `Core — scanning and export/Sources/Core/CSVWriter.swift` | CSV columns, escaping, and writing |
+| `Sources/Core/ScannerSettings.swift` | Applications folder and default IT administrator email |
+| `Sources/Core/ApplicationScanner.swift` | App enumeration and local metadata extraction |
+| `Sources/Core/MachOInspector.swift` | Executable architecture detection |
+| `Sources/Core/CSVWriter.swift` | CSV columns, escaping, and writing |
 | `Sources/UI/ScannerViewModel.swift` | Scan and email-draft workflow |
 | `Sources/UI/ScannerWindow.swift` | SwiftUI interface |
 
