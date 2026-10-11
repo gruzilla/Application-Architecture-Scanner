@@ -1,0 +1,404 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000000000000000000000148 /* Sources/UI/ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000147 /* Sources/UI/ScannerViewModel.swift */; };
+		000000000000000000000149 /* Sources/UI/ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000147 /* Sources/UI/ScannerViewModel.swift */; };
+		00000000000000000000014B /* Sources/UI/ScannerWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000014A /* Sources/UI/ScannerWindow.swift */; };
+		00000000000000000000014D /* Sources/ScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000014C /* Sources/ScannerApp.swift */; };
+		00000000000000000000014F /* Tests/ScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000014E /* Tests/ScannerTests.swift */; };
+		0C224B4C307BD9C400E6BE44 /* CSVWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C224B47307BD9C400E6BE44 /* CSVWriter.swift */; };
+		0C224B4D307BD9C400E6BE44 /* MachOInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C224B48307BD9C400E6BE44 /* MachOInspector.swift */; };
+		0C224B4E307BD9C400E6BE44 /* ApplicationScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C224B46307BD9C400E6BE44 /* ApplicationScanner.swift */; };
+		0C224B4F307BD9C400E6BE44 /* ScannerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C224B4A307BD9C400E6BE44 /* ScannerSettings.swift */; };
+		0C224B50307BD9C400E6BE44 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C224B49307BD9C400E6BE44 /* Models.swift */; };
+		0C224B51307BD9C400E6BE44 /* CSVWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C224B47307BD9C400E6BE44 /* CSVWriter.swift */; };
+		0C224B52307BD9C400E6BE44 /* MachOInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C224B48307BD9C400E6BE44 /* MachOInspector.swift */; };
+		0C224B53307BD9C400E6BE44 /* ApplicationScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C224B46307BD9C400E6BE44 /* ApplicationScanner.swift */; };
+		0C224B54307BD9C400E6BE44 /* ScannerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C224B4A307BD9C400E6BE44 /* ScannerSettings.swift */; };
+		0C224B55307BD9C400E6BE44 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C224B49307BD9C400E6BE44 /* Models.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		000000000000000000000005 /* Application Architecture Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Application Architecture Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00000000000000000000005A /* ScannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000000147 /* Sources/UI/ScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/UI/ScannerViewModel.swift; sourceTree = "<group>"; };
+		00000000000000000000014A /* Sources/UI/ScannerWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/UI/ScannerWindow.swift; sourceTree = "<group>"; };
+		00000000000000000000014C /* Sources/ScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/ScannerApp.swift; sourceTree = "<group>"; };
+		00000000000000000000014E /* Tests/ScannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/ScannerTests.swift; sourceTree = "<group>"; };
+		000000000000000000000150 /* Resources/Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Resources/Info.plist; sourceTree = "<group>"; };
+		000000000000000000000151 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		000000000000000000000152 /* Scripts/build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Scripts/build.sh; sourceTree = "<group>"; };
+		000000000000000000000153 /* Scripts/test.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Scripts/test.sh; sourceTree = "<group>"; };
+		000000000000000000000154 /* Scripts/package.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Scripts/package.sh; sourceTree = "<group>"; };
+		0C224B46307BD9C400E6BE44 /* ApplicationScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationScanner.swift; sourceTree = "<group>"; };
+		0C224B47307BD9C400E6BE44 /* CSVWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVWriter.swift; sourceTree = "<group>"; };
+		0C224B48307BD9C400E6BE44 /* MachOInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachOInspector.swift; sourceTree = "<group>"; };
+		0C224B49307BD9C400E6BE44 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		0C224B4A307BD9C400E6BE44 /* ScannerSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerSettings.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		000000000000000000000002 = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000051 /* UI — SwiftUI and workflow */,
+				00000000000000000000014E /* Tests/ScannerTests.swift */,
+				000000000000000000000150 /* Resources/Info.plist */,
+				000000000000000000000151 /* README.md */,
+				000000000000000000000152 /* Scripts/build.sh */,
+				000000000000000000000153 /* Scripts/test.sh */,
+				000000000000000000000154 /* Scripts/package.sh */,
+				0C224B4B307BD9C400E6BE44 /* Core */,
+				000000000000000000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		000000000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000005 /* Application Architecture Scanner.app */,
+				00000000000000000000005A /* ScannerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		000000000000000000000051 /* UI — SwiftUI and workflow */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000147 /* Sources/UI/ScannerViewModel.swift */,
+				00000000000000000000014A /* Sources/UI/ScannerWindow.swift */,
+				00000000000000000000014C /* Sources/ScannerApp.swift */,
+			);
+			name = "UI — SwiftUI and workflow";
+			sourceTree = "<group>";
+		};
+		0C224B4B307BD9C400E6BE44 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0C224B46307BD9C400E6BE44 /* ApplicationScanner.swift */,
+				0C224B47307BD9C400E6BE44 /* CSVWriter.swift */,
+				0C224B48307BD9C400E6BE44 /* MachOInspector.swift */,
+				0C224B49307BD9C400E6BE44 /* Models.swift */,
+				0C224B4A307BD9C400E6BE44 /* ScannerSettings.swift */,
+			);
+			name = Core;
+			path = Sources/Core;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		000000000000000000000004 /* Application Architecture Scanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000000000000000008 /* Build configuration list for PBXNativeTarget "Application Architecture Scanner" */;
+			buildPhases = (
+				000000000000000000000006 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Application Architecture Scanner";
+			productName = "Application Architecture Scanner";
+			productReference = 000000000000000000000005 /* Application Architecture Scanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		00000000000000000000005C /* ScannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00000000000000000000005D /* Build configuration list for PBXNativeTarget "ScannerTests" */;
+			buildPhases = (
+				00000000000000000000005B /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScannerTests;
+			productName = ScannerTests;
+			productReference = 00000000000000000000005A /* ScannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		000000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2700;
+			};
+			buildConfigurationList = 000000000000000000000007 /* Build configuration list for PBXProject "Application Architecture Scanner" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 000000000000000000000002;
+			productRefGroup = 000000000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				000000000000000000000004 /* Application Architecture Scanner */,
+				00000000000000000000005C /* ScannerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		000000000000000000000006 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C224B4C307BD9C400E6BE44 /* CSVWriter.swift in Sources */,
+				0C224B4D307BD9C400E6BE44 /* MachOInspector.swift in Sources */,
+				0C224B4E307BD9C400E6BE44 /* ApplicationScanner.swift in Sources */,
+				0C224B4F307BD9C400E6BE44 /* ScannerSettings.swift in Sources */,
+				0C224B50307BD9C400E6BE44 /* Models.swift in Sources */,
+				000000000000000000000148 /* Sources/UI/ScannerViewModel.swift in Sources */,
+				00000000000000000000014B /* Sources/UI/ScannerWindow.swift in Sources */,
+				00000000000000000000014D /* Sources/ScannerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00000000000000000000005B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C224B51307BD9C400E6BE44 /* CSVWriter.swift in Sources */,
+				0C224B52307BD9C400E6BE44 /* MachOInspector.swift in Sources */,
+				0C224B53307BD9C400E6BE44 /* ApplicationScanner.swift in Sources */,
+				0C224B54307BD9C400E6BE44 /* ScannerSettings.swift in Sources */,
+				0C224B55307BD9C400E6BE44 /* Models.swift in Sources */,
+				000000000000000000000149 /* Sources/UI/ScannerViewModel.swift in Sources */,
+				00000000000000000000014F /* Tests/ScannerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		000000000000000000000010 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		000000000000000000000011 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		000000000000000000000012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "local.portable.application-architecture-scanner";
+				PRODUCT_MODULE_NAME = ApplicationArchitectureScanner;
+				PRODUCT_NAME = "Application Architecture Scanner";
+				SDKROOT = macosx;
+				SKIP_INSTALL = NO;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		000000000000000000000013 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "local.portable.application-architecture-scanner";
+				PRODUCT_MODULE_NAME = ApplicationArchitectureScanner;
+				PRODUCT_NAME = "Application Architecture Scanner";
+				SDKROOT = macosx;
+				SKIP_INSTALL = NO;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		00000000000000000000005E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "local.portable.application-scanner.tests";
+				PRODUCT_NAME = ScannerTests;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "";
+			};
+			name = Debug;
+		};
+		00000000000000000000005F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "local.portable.application-scanner.tests";
+				PRODUCT_NAME = ScannerTests;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		000000000000000000000007 /* Build configuration list for PBXProject "Application Architecture Scanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000010 /* Debug */,
+				000000000000000000000011 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000000000000000000000008 /* Build configuration list for PBXNativeTarget "Application Architecture Scanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000012 /* Debug */,
+				000000000000000000000013 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00000000000000000000005D /* Build configuration list for PBXNativeTarget "ScannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00000000000000000000005E /* Debug */,
+				00000000000000000000005F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 000000000000000000000001 /* Project object */;
+}
