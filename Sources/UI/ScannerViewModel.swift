@@ -25,7 +25,8 @@ struct SystemMailComposer: MailComposing {
 /// the main queue; disk operations run on one serial worker queue.
 final class ScannerViewModel: ObservableObject {
     @Published private(set) var phase: WorkflowPhase = .ready
-    @Published private(set) var progress = WorkProgress(message: "Preparing to find application bundles…", fraction: nil)
+    @Published private(set) var progress = WorkProgress(
+        message: "Preparing to find application bundles…", fraction: nil)
     @Published private(set) var report: ScanReport?
     @Published private(set) var errorMessage = ""
     @Published var administratorEmail: String
@@ -37,8 +38,11 @@ final class ScannerViewModel: ObservableObject {
     private let worker = DispatchQueue(label: "local.application-scanner.worker", qos: .userInitiated)
     private var cancellation = CancellationToken()
 
-    init(settings: ScannerSettings = ScannerSettings(), destination: URL? = nil,
-         scanner: ApplicationScanning = ApplicationScanner(), mailComposer: MailComposing = SystemMailComposer()) {
+    init(
+        settings: ScannerSettings = ScannerSettings(), destination: URL? = nil,
+        scanner: ApplicationScanning = ApplicationScanner(),
+        mailComposer: MailComposing = SystemMailComposer()
+    ) {
         self.settings = settings
         self.administratorEmail = settings.administratorEmail
         self.destination = destination ?? Bundle.main.bundleURL.deletingLastPathComponent()
@@ -59,7 +63,8 @@ final class ScannerViewModel: ObservableObject {
         let progressHandler = makeProgressHandler()
         worker.async { [weak self] in
             do {
-                let report = try scanner.scan(root: root, destination: destination, cancellation: token, progress: progressHandler)
+                let report = try scanner.scan(
+                    root: root, destination: destination, cancellation: token, progress: progressHandler)
                 DispatchQueue.main.async {
                     self?.report = report
                     self?.phase = .mail

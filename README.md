@@ -19,8 +19,14 @@ The shell helpers provide the equivalent command-line workflows:
 ```sh
 /bin/bash Scripts/build.sh
 /bin/bash Scripts/test.sh
+/bin/bash Scripts/lint.sh
+/bin/bash Scripts/format.sh
 /bin/bash Scripts/package.sh
 ```
+
+`lint.sh` checks all Swift sources with the `swift-format` tool included in the
+active Xcode toolchain. `format.sh` applies the shared `.swift-format` rules in
+place. Run the formatter before committing, then run lint and tests.
 
 The app saves CSV files beside the built application. When distributing it on a
 USB stick, place the application in a writable folder.

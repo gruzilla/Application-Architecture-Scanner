@@ -41,6 +41,8 @@
 		0C224B48307BD9C400E6BE44 /* MachOInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachOInspector.swift; sourceTree = "<group>"; };
 		0C224B49307BD9C400E6BE44 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		0C224B4A307BD9C400E6BE44 /* ScannerSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerSettings.swift; sourceTree = "<group>"; };
+		0C224B56307F9E1700E6BE44 /* format.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = format.sh; path = Scripts/format.sh; sourceTree = "<group>"; };
+		0C224B57307F9E1700E6BE44 /* lint.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = lint.sh; path = Scripts/lint.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -53,6 +55,8 @@
 				000000000000000000000151 /* README.md */,
 				000000000000000000000152 /* Scripts/build.sh */,
 				000000000000000000000153 /* Scripts/test.sh */,
+				0C224B56307F9E1700E6BE44 /* format.sh */,
+				0C224B57307F9E1700E6BE44 /* lint.sh */,
 				000000000000000000000154 /* Scripts/package.sh */,
 				0C224B4B307BD9C400E6BE44 /* Core */,
 				000000000000000000000003 /* Products */,

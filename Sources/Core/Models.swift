@@ -18,6 +18,8 @@ struct ApplicationRecord: Identifiable, Codable {
     var executablePath: URL?
     var architectures: [String] = []
     var kind: ApplicationKind = .unknown
+    var developerName = ""
+    var developerTeamIdentifier = ""
     var notes = ""
 }
 

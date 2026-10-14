@@ -11,7 +11,7 @@ struct ScannerApp: App {
             ScannerWindow(model: model)
         }
         // One inventory per app launch avoids two windows competing for one run.
-        .commands { CommandGroup(replacing: .newItem) { } }
+        .commands { CommandGroup(replacing: .newItem) {} }
     }
 }
 

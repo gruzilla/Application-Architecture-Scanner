@@ -1,0 +1,21 @@
+{
+  "indentation": {
+    "spaces": 4
+  },
+  "lineLength": 110,
+  "maximumBlankLines": 1,
+  "multiElementCollectionTrailingCommas": true,
+  "rules": {
+    "DoNotUseSemicolons": true,
+    "FileScopedDeclarationPrivacy": true,
+    "NeverForceUnwrap": false,
+    "NeverUseForceTry": true,
+    "NoBlockComments": true,
+    "OneCasePerLine": true,
+    "OneVariableDeclarationPerLine": true,
+    "OrderedImports": true,
+    "UseShorthandTypeNames": true,
+    "UseTripleSlashForDocumentationComments": true
+  },
+  "version": 1
+}

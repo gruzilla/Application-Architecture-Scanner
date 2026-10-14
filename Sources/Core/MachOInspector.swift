@@ -19,19 +19,25 @@ enum MachOInspector {
 
         switch magic {
         case [0xCE, 0xFA, 0xED, 0xFE], [0xCF, 0xFA, 0xED, 0xFE]:
-            littleEndian = true; fatStride = nil
+            littleEndian = true
+            fatStride = nil
         case [0xFE, 0xED, 0xFA, 0xCE], [0xFE, 0xED, 0xFA, 0xCF]:
-            littleEndian = false; fatStride = nil
+            littleEndian = false
+            fatStride = nil
         case [0xCA, 0xFE, 0xBA, 0xBE]:
-            littleEndian = false; fatStride = 20
+            littleEndian = false
+            fatStride = 20
         case [0xBE, 0xBA, 0xFE, 0xCA]:
-            littleEndian = true; fatStride = 20
+            littleEndian = true
+            fatStride = 20
         case [0xCA, 0xFE, 0xBA, 0xBF]:
-            littleEndian = false; fatStride = 32
+            littleEndian = false
+            fatStride = 32
         case [0xBF, 0xBA, 0xFE, 0xCA]:
-            littleEndian = true; fatStride = 32
+            littleEndian = true
+            fatStride = 32
         default:
-            return [] // Script launchers and other formats cannot establish an architecture.
+            return []  // Script launchers and other formats cannot establish an architecture.
         }
 
         func word(at offset: Int) -> UInt32 {

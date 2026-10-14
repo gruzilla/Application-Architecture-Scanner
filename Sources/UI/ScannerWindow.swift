@@ -15,13 +15,16 @@ struct ScannerWindow: View {
             if let report = model.report {
                 Divider()
                 Text("CSV: \(report.outputURL.path)")
-                    .font(.caption).foregroundColor(.secondary)
+                    .font(.caption)
+                    .foregroundColor(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
                     .textSelection(.enabled)
                 if !report.warnings.isEmpty {
                     Text(report.warnings.joined(separator: "\n"))
-                        .font(.caption).foregroundColor(.orange)
-                        .lineLimit(4).help(report.warnings.joined(separator: "\n"))
+                        .font(.caption)
+                        .foregroundColor(.orange)
+                        .lineLimit(4)
+                        .help(report.warnings.joined(separator: "\n"))
                 }
             }
         }
@@ -33,7 +36,6 @@ struct ScannerWindow: View {
             DispatchQueue.main.async { model.startScan() }
         }
     }
-
 }
 
 private struct ScannerContent: View {
@@ -52,8 +54,10 @@ private struct ScannerContent: View {
         case .finished:
             CompletionView(model: model)
         case .failed:
-            Text("The operation could not finish").font(.headline)
-            Text(model.errorMessage).fixedSize(horizontal: false, vertical: true)
+            Text("The operation could not finish")
+                .font(.headline)
+            Text(model.errorMessage)
+                .fixedSize(horizontal: false, vertical: true)
             if model.report != nil {
                 Text("The saved CSV is still available.")
                     .foregroundColor(.secondary)
@@ -69,11 +73,14 @@ private struct ScanProgress: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             if let fraction = progress.fraction {
-                ProgressView(value: fraction, total: 1).progressViewStyle(LinearProgressViewStyle())
+                ProgressView(value: fraction, total: 1)
+                    .progressViewStyle(.linear)
             } else {
-                ProgressView().progressViewStyle(LinearProgressViewStyle())
+                ProgressView()
+                    .progressViewStyle(.linear)
             }
-            Text(progress.message).font(.callout)
+            Text(progress.message)
+                .font(.callout)
                 .fixedSize(horizontal: false, vertical: true)
         }
         .accessibilityElement(children: .combine)
@@ -85,15 +92,18 @@ private struct MailPrompt: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
-            Text("Application scan complete").font(.headline)
+            Text("Application scan complete")
+                .font(.headline)
             Text("Applications scanned: \(model.report?.applications.count ?? 0)")
             Text("Intel-only apps: \(model.report?.intelApplications.count ?? 0)")
             Text("Would you like to email the CSV report to your IT administrator?")
                 .foregroundColor(.secondary)
+            IntelApplicationList(applications: model.report?.intelApplications ?? [])
             TextField("IT administrator email", text: $model.administratorEmail)
                 .textFieldStyle(.roundedBorder)
             if !model.errorMessage.isEmpty {
-                Text(model.errorMessage).foregroundColor(.red)
+                Text(model.errorMessage)
+                    .foregroundColor(.red)
             }
             HStack {
                 Button("Not Now") { model.finishWithoutEmail() }
@@ -105,13 +115,77 @@ private struct MailPrompt: View {
     }
 }
 
+private struct IntelApplicationList: View {
+    let applications: [ApplicationRecord]
+
+    var body: some View {
+        if applications.isEmpty {
+            Text("No Intel-only applications were found.")
+                .foregroundColor(.secondary)
+        } else {
+            List(applications) { application in
+                IntelApplicationRow(
+                    name: application.name,
+                    version: application.version,
+                    bundleIdentifier: application.bundleIdentifier,
+                    developerName: application.developerName,
+                    teamIdentifier: application.developerTeamIdentifier
+                )
+            }
+            .frame(minHeight: 160)
+        }
+    }
+}
+
+private struct IntelApplicationRow: View {
+    let name: String
+    let version: String
+    let bundleIdentifier: String
+    let developerName: String
+    let teamIdentifier: String
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            HStack {
+                Text(name)
+                    .fontWeight(.medium)
+                if !version.isEmpty {
+                    Text(version)
+                        .foregroundColor(.secondary)
+                }
+            }
+            Text(bundleIdentifier.isEmpty ? "No bundle identifier" : bundleIdentifier)
+                .font(.caption)
+                .foregroundColor(.secondary)
+            Text(developerDescription)
+                .font(.caption)
+                .foregroundColor(.secondary)
+        }
+        .padding(.vertical, 4)
+    }
+
+    private var developerDescription: String {
+        if !developerName.isEmpty, !teamIdentifier.isEmpty {
+            return "Developer: \(developerName) · Team ID: \(teamIdentifier)"
+        }
+        if !developerName.isEmpty {
+            return "Developer: \(developerName)"
+        }
+        if !teamIdentifier.isEmpty {
+            return "Team ID: \(teamIdentifier)"
+        }
+        return "Developer identity unavailable"
+    }
+}
+
 private struct CompletionView: View {
     @ObservedObject var model: ScannerViewModel
 
     var body: some View {
         let report = model.report
         VStack(alignment: .leading, spacing: 14) {
-            Text("Application scan complete").font(.headline)
+            Text("Application scan complete")
+                .font(.headline)
             Text("Applications scanned: \(report?.applications.count ?? 0)")
             Text("Intel-only apps: \(report?.intelApplications.count ?? 0)")
             Button("Show CSV") { model.revealCSV() }
