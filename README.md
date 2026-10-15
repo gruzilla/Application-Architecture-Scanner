@@ -10,6 +10,9 @@ administrator. The recipient is prefilled from `administratorEmail` in
 email application. The CSV is attached to a new draft; the user reviews and sends
 the message from their email application.
 
+Change  `administratorEmail` in `ScannerSettings.swif` and rebuild to use the app
+for your clients (word chosen on my usage-context).
+
 ## Build and test
 
 Open `Application Architecture Scanner.xcodeproj` in Xcode, select the
@@ -44,4 +47,4 @@ USB stick, place the application in a writable folder.
 
 Only each installed app's main executable is inspected; helpers and plug-ins can
 have different architectures. The project does not install, modify, or download
-applications.
+applications. It does not automatically send mails.

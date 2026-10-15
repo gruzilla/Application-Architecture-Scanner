@@ -29,7 +29,7 @@ struct ScannerWindow: View {
             }
         }
         .padding(24)
-        .frame(minWidth: 680, idealWidth: 740, minHeight: 480, idealHeight: 560)
+        .frame(minWidth: 680, idealWidth: 740, minHeight: 580, idealHeight: 640)
         .onAppear {
             // Defer to the next main-loop turn so the initial window is laid out
             // before the background scan is scheduled.
